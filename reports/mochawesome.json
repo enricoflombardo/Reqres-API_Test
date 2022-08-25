@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 4,
-    "tests": 4,
-    "passes": 4,
+    "suites": 5,
+    "tests": 5,
+    "passes": 3,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-08-24T09:09:35.640Z",
-    "end": "2022-08-24T09:09:37.730Z",
-    "duration": 2090,
-    "testsRegistered": 4,
-    "passPercent": 100,
+    "failures": 2,
+    "start": "2022-08-24T10:30:52.368Z",
+    "end": "2022-08-24T10:30:54.773Z",
+    "duration": 2405,
+    "testsRegistered": 5,
+    "passPercent": 60,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "92a72711-5607-4609-9453-a227c7e472f6",
+      "uuid": "fe0b724b-7a47-4ab9-8257-a82b9afac7df",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a6879953-c6d3-4a70-b948-4c2e25556542",
+          "uuid": "3d8c7218-0273-4ee0-8a76-e9e6b068f6ad",
           "title": "As a guest, I want to login",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\login.test.js",
           "file": "\\test\\scenarios\\login.test.js",
@@ -38,7 +38,7 @@
               "title": "Should successfully login using valid account",
               "fullTitle": "As a guest, I want to login Should successfully login using valid account",
               "timedOut": false,
-              "duration": 730,
+              "duration": 683,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "const response = await ReqresAPI.login(data.VALID_LOGIN)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
               "err": {},
-              "uuid": "b4233364-3f93-4c93-981c-eb7e9ce53598",
-              "parentUUID": "a6879953-c6d3-4a70-b948-4c2e25556542",
+              "uuid": "7d14560f-aae1-455b-a4ee-912d84568863",
+              "parentUUID": "3d8c7218-0273-4ee0-8a76-e9e6b068f6ad",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b4233364-3f93-4c93-981c-eb7e9ce53598"
+            "7d14560f-aae1-455b-a4ee-912d84568863"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 730,
+          "duration": 683,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "82cd2e3c-5648-436e-be9e-b25c42cd301e",
+          "uuid": "815357e3-c4b6-41de-a6f3-09c8cbef0aa7",
           "title": "As a guest, I want to register",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\register.test.js",
           "file": "\\test\\scenarios\\register.test.js",
@@ -77,7 +77,7 @@
               "title": "Should succesfully register using valid account",
               "fullTitle": "As a guest, I want to register Should succesfully register using valid account",
               "timedOut": false,
-              "duration": 654,
+              "duration": 556,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,26 +86,69 @@
               "context": null,
               "code": "const response = await ReqresAPI.register(data.VALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);",
               "err": {},
-              "uuid": "44167cd7-5be9-4929-89ff-fb0b7c300026",
-              "parentUUID": "82cd2e3c-5648-436e-be9e-b25c42cd301e",
+              "uuid": "88b72314-f736-4595-be5f-905042ddcd38",
+              "parentUUID": "815357e3-c4b6-41de-a6f3-09c8cbef0aa7",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "44167cd7-5be9-4929-89ff-fb0b7c300026"
+            "88b72314-f736-4595-be5f-905042ddcd38"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 654,
+          "duration": 556,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "3fc93b26-48eb-4503-bb8d-f9fd35eac7aa",
+          "uuid": "09acfdfb-89ad-4f2e-92b8-5196002c5e2c",
+          "title": "As a guest, I must insert a password when register",
+          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\register.test.js",
+          "file": "\\test\\scenarios\\register.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should failed to register when password not filled",
+              "fullTitle": "As a guest, I must insert a password when register Should failed to register when password not filled",
+              "timedOut": false,
+              "duration": 494,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await ReqresAPI.register(data.INVALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/register.test.js:20:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "254b9c5a-0b0e-4c73-bf6a-9b002d3e91b3",
+              "parentUUID": "09acfdfb-89ad-4f2e-92b8-5196002c5e2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "254b9c5a-0b0e-4c73-bf6a-9b002d3e91b3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 494,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2e53240f-e1f4-403f-b4cd-ba50447f96a8",
           "title": "As a guest, I want to my user data",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\user.test.js",
           "file": "\\test\\scenarios\\user.test.js",
@@ -116,7 +159,7 @@
               "title": "Should successfully showing user data",
               "fullTitle": "As a guest, I want to my user data Should successfully showing user data",
               "timedOut": false,
-              "duration": 161,
+              "duration": 124,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -125,26 +168,26 @@
               "context": null,
               "code": "const response = await ReqresAPI.user()\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"data\", \"support\"]);\nassert.isObject(response.data, \"data\");\nexpect(response.data).to.deep.nested.property('data.id').that.deep.equals(2);",
               "err": {},
-              "uuid": "075e2f06-90a7-4b4e-bace-a21b3608ca93",
-              "parentUUID": "3fc93b26-48eb-4503-bb8d-f9fd35eac7aa",
+              "uuid": "f77df017-46e5-4a2a-b2a7-f234758003ef",
+              "parentUUID": "2e53240f-e1f4-403f-b4cd-ba50447f96a8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "075e2f06-90a7-4b4e-bace-a21b3608ca93"
+            "f77df017-46e5-4a2a-b2a7-f234758003ef"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 161,
+          "duration": 124,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "7b867183-16cf-47ac-8949-29af86e82965",
+          "uuid": "559b8a10-e44a-4461-8ae6-14966ccaf973",
           "title": "As a guest, I want to update my data",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\user.test.js",
           "file": "\\test\\scenarios\\user.test.js",
@@ -156,25 +199,29 @@
               "fullTitle": "As a guest, I want to update my data Should successfully update user data",
               "timedOut": false,
               "duration": 530,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "const response = await ReqresAPI.update_user(data.UPDATE_DATA)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"name\", \"job\"]);\nassert.isString(response.data.name);\nassert.equal(response.data.name, \"ocir\");",
-              "err": {},
-              "uuid": "ad351073-d0c3-4405-b161-e71f788a7680",
-              "parentUUID": "7b867183-16cf-47ac-8949-29af86e82965",
+              "code": "const response = await ReqresAPI.update_user(data.UPDATE_DATA)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"name\", \"job\"]);\nassert.isString(response.data.name);\nassert.equal(response.data.name, \"rico\");",
+              "err": {
+                "message": "AssertionError: expected 'ocir' to equal 'rico'",
+                "estack": "AssertionError: expected 'ocir' to equal 'rico'\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/user.test.js:23:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- ocir\n+ rico\n"
+              },
+              "uuid": "cd3219a6-af17-4c56-aab0-21696fd183a4",
+              "parentUUID": "559b8a10-e44a-4461-8ae6-14966ccaf973",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "ad351073-d0c3-4405-b161-e71f788a7680"
+          "passes": [],
+          "failures": [
+            "cd3219a6-af17-4c56-aab0-21696fd183a4"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
           "duration": 530,

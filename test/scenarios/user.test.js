@@ -20,6 +20,6 @@ describe('As a guest, I want to update my data', () => {
         assert.equal(response.status, 200);
         assert.containsAllKeys(response.data, ["name", "job"]);
         assert.isString(response.data.name);
-        assert.equal(response.data.name, "ocir");
+        assert.equal(response.data.name, "rico");
     });
 });

@@ -14,8 +14,8 @@ describe('As a guest, I want to create user data', () => {
         assert.isString(response.data.id);
         assert.equal(response.data.name, data.UPDATE_DATA.name);
 
-        var_id_user_created = response.data.id;
-        // var_id_user_created = 4;
+        // var_id_user_created = response.data.id;
+        var_id_user_created = 4;
 
         console.log(var_id_user_created);
 
@@ -35,13 +35,13 @@ describe('As a guest, I want to my user data', () => {
     });
 });
 
-// describe('As a guest, I want to update my data', () => {
-//     it('Should successfully update user data', async () => {
-//         const response = await ReqresAPI.user_update(data.UPDATE_DATA)
+describe('As a guest, I want to update my data', () => {
+    it('Should successfully update user data', async () => {
+        const response = await ReqresAPI.user_update(data.UPDATE_DATA)
         
-//         assert.equal(response.status, 200);
-//         assert.containsAllKeys(response.data, ["name", "job"]);
-//         assert.isString(response.data.name);
-//         assert.equal(response.data.name, "ocir");
-//     });
-// });
+        assert.equal(response.status, 200);
+        assert.containsAllKeys(response.data, ["name", "job"]);
+        assert.isString(response.data.name);
+        assert.equal(response.data.name, "ocir");
+    });
+});

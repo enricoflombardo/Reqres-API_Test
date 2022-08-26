@@ -17,7 +17,7 @@
   "scripts": {
     "postinstall": "link-module-alias",
     "preinstall": "link-module-alias && link-module-alias clean || true",
-    "mocha:test": "node_modules/.bin/mocha test/scenarios --reporter-option reportDir=reports"
+    "mocha:test": "node_modules/.bin/mocha test/scenarios/ --reporter-option reportDir=reports"
   },
   "_moduleAliases": {
     "$root"      : "test", 

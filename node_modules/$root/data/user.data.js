@@ -9,6 +9,7 @@ export const INVALID_REGISTER = {
 
 export const VALID_LOGIN = {
     "email": "eve.holt@reqres.in",
+    // "email": var_id_reg,
     "password": "cityslicka"
 };
 

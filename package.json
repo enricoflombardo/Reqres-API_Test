@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "chai": "^4.3.6",
+    "chai-json-schema": "^1.5.1",
     "dotenv": "^16.0.1",
     "link-module-alias": "^1.2.0",
     "mocha": "^10.0.0",
@@ -17,10 +18,10 @@
   "scripts": {
     "postinstall": "link-module-alias",
     "preinstall": "link-module-alias && link-module-alias clean || true",
-    "mocha:test": "node_modules/.bin/mocha test/scenarios --reporter-option reportDir=reports"
+    "mocha:test": "node_modules/.bin/mocha test/scenarios/ --reporter-option reportDir=reports"
   },
   "_moduleAliases": {
-    "$root"      : "test", 
-    "$helper"      : "test/helper"
+    "$root": "test",
+    "$helper": "test/helper"
   }
 }

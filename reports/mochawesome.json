@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 5,
-    "tests": 5,
-    "passes": 3,
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 2,
-    "start": "2022-08-24T10:30:52.368Z",
-    "end": "2022-08-24T10:30:54.773Z",
-    "duration": 2405,
-    "testsRegistered": 5,
-    "passPercent": 60,
+    "failures": 1,
+    "start": "2022-08-29T07:27:14.709Z",
+    "end": "2022-08-29T07:27:15.307Z",
+    "duration": 598,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,58 +18,19 @@
   },
   "results": [
     {
-      "uuid": "fe0b724b-7a47-4ab9-8257-a82b9afac7df",
+      "uuid": "117cb9fb-875f-4d25-8cc7-4873a0238d66",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\01_register.test.js",
+      "file": "\\test\\scenarios\\01_register.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "3d8c7218-0273-4ee0-8a76-e9e6b068f6ad",
-          "title": "As a guest, I want to login",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\login.test.js",
-          "file": "\\test\\scenarios\\login.test.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Should successfully login using valid account",
-              "fullTitle": "As a guest, I want to login Should successfully login using valid account",
-              "timedOut": false,
-              "duration": 683,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await ReqresAPI.login(data.VALID_LOGIN)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
-              "err": {},
-              "uuid": "7d14560f-aae1-455b-a4ee-912d84568863",
-              "parentUUID": "3d8c7218-0273-4ee0-8a76-e9e6b068f6ad",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "7d14560f-aae1-455b-a4ee-912d84568863"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 683,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "815357e3-c4b6-41de-a6f3-09c8cbef0aa7",
+          "uuid": "38545025-3d3d-44bf-a953-730f1befbeaa",
           "title": "As a guest, I want to register",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\register.test.js",
-          "file": "\\test\\scenarios\\register.test.js",
+          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\01_register.test.js",
+          "file": "\\test\\scenarios\\01_register.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
@@ -77,60 +38,21 @@
               "title": "Should succesfully register using valid account",
               "fullTitle": "As a guest, I want to register Should succesfully register using valid account",
               "timedOut": false,
-              "duration": 556,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await ReqresAPI.register(data.VALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);",
-              "err": {},
-              "uuid": "88b72314-f736-4595-be5f-905042ddcd38",
-              "parentUUID": "815357e3-c4b6-41de-a6f3-09c8cbef0aa7",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "88b72314-f736-4595-be5f-905042ddcd38"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 556,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "09acfdfb-89ad-4f2e-92b8-5196002c5e2c",
-          "title": "As a guest, I must insert a password when register",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\register.test.js",
-          "file": "\\test\\scenarios\\register.test.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Should failed to register when password not filled",
-              "fullTitle": "As a guest, I must insert a password when register Should failed to register when password not filled",
-              "timedOut": false,
-              "duration": 494,
+              "duration": 589,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const response = await ReqresAPI.register(data.INVALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);",
+              "code": "const response = await ReqresAPI.register(data.VALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_REGISTER_SCHEMA)",
               "err": {
-                "message": "AssertionError: expected 400 to equal 200",
-                "estack": "AssertionError: expected 400 to equal 200\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/register.test.js:20:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": "- 400\n+ 200\n"
+                "message": "AssertionError: expected value to match json-schema '{\"type\":\"object\",\"default\":{},...' -> '{\"id\":4,\"token\":\"QpwL5tke4Pnpj...'\n      Invalid type: number (expected string)\n          schema: {\"type\":\"object\",\"default\":{},\"required\":[\"id\"],\"properties\"...\n          rule:   /properties/id/type -> \"string\"\n          field:  /id -> number: 4",
+                "estack": "AssertionError: expected value to match json-schema '{\"type\":\"object\",\"default\":{},...' -> '{\"id\":4,\"token\":\"QpwL5tke4Pnpj...'\n      Invalid type: number (expected string)\n          schema: {\"type\":\"object\",\"default\":{},\"required\":[\"id\"],\"properties\"...\n          rule:   /properties/id/type -> \"string\"\n          field:  /id -> number: 4\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/01_register.test.js:18:37)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": null
               },
-              "uuid": "254b9c5a-0b0e-4c73-bf6a-9b002d3e91b3",
-              "parentUUID": "09acfdfb-89ad-4f2e-92b8-5196002c5e2c",
+              "uuid": "a4b2db77-79a7-4c6a-998d-b1ae63352e58",
+              "parentUUID": "38545025-3d3d-44bf-a953-730f1befbeaa",
               "isHook": false,
               "skipped": false
             }
@@ -138,96 +60,14 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "254b9c5a-0b0e-4c73-bf6a-9b002d3e91b3"
+            "a4b2db77-79a7-4c6a-998d-b1ae63352e58"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 494,
+          "duration": 589,
           "root": false,
           "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "2e53240f-e1f4-403f-b4cd-ba50447f96a8",
-          "title": "As a guest, I want to my user data",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\user.test.js",
-          "file": "\\test\\scenarios\\user.test.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Should successfully showing user data",
-              "fullTitle": "As a guest, I want to my user data Should successfully showing user data",
-              "timedOut": false,
-              "duration": 124,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await ReqresAPI.user()\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"data\", \"support\"]);\nassert.isObject(response.data, \"data\");\nexpect(response.data).to.deep.nested.property('data.id').that.deep.equals(2);",
-              "err": {},
-              "uuid": "f77df017-46e5-4a2a-b2a7-f234758003ef",
-              "parentUUID": "2e53240f-e1f4-403f-b4cd-ba50447f96a8",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "f77df017-46e5-4a2a-b2a7-f234758003ef"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 124,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
-        },
-        {
-          "uuid": "559b8a10-e44a-4461-8ae6-14966ccaf973",
-          "title": "As a guest, I want to update my data",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\user.test.js",
-          "file": "\\test\\scenarios\\user.test.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Should successfully update user data",
-              "fullTitle": "As a guest, I want to update my data Should successfully update user data",
-              "timedOut": false,
-              "duration": 530,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
-              "pending": false,
-              "context": null,
-              "code": "const response = await ReqresAPI.update_user(data.UPDATE_DATA)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"name\", \"job\"]);\nassert.isString(response.data.name);\nassert.equal(response.data.name, \"rico\");",
-              "err": {
-                "message": "AssertionError: expected 'ocir' to equal 'rico'",
-                "estack": "AssertionError: expected 'ocir' to equal 'rico'\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/user.test.js:23:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": "- ocir\n+ rico\n"
-              },
-              "uuid": "cd3219a6-af17-4c56-aab0-21696fd183a4",
-              "parentUUID": "559b8a10-e44a-4461-8ae6-14966ccaf973",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [],
-          "failures": [
-            "cd3219a6-af17-4c56-aab0-21696fd183a4"
-          ],
-          "pending": [],
-          "skipped": [],
-          "duration": 530,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 2000
+          "_timeout": 180000
         }
       ],
       "passes": [],
@@ -237,7 +77,7 @@
       "duration": 0,
       "root": true,
       "rootEmpty": true,
-      "_timeout": 2000
+      "_timeout": 180000
     }
   ],
   "meta": {

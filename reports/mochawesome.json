@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 4,
-    "passes": 3,
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2022-08-26T06:33:35.194Z",
-    "end": "2022-08-26T06:33:38.925Z",
-    "duration": 3731,
-    "testsRegistered": 4,
-    "passPercent": 75,
+    "start": "2022-08-29T07:27:14.709Z",
+    "end": "2022-08-29T07:27:15.307Z",
+    "duration": 598,
+    "testsRegistered": 1,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,151 +18,53 @@
   },
   "results": [
     {
-      "uuid": "cc9a95b7-ce01-4cd7-88db-b9754488d417",
+      "uuid": "117cb9fb-875f-4d25-8cc7-4873a0238d66",
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\01_register.test.js",
+      "file": "\\test\\scenarios\\01_register.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "14c7b1f4-8f7f-416e-a799-3f5c19722229",
-          "title": "As a guest, I want to create user data",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\04_user_test.test.js",
-          "file": "\\test\\scenarios\\04_user_test.test.js",
+          "uuid": "38545025-3d3d-44bf-a953-730f1befbeaa",
+          "title": "As a guest, I want to register",
+          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\01_register.test.js",
+          "file": "\\test\\scenarios\\01_register.test.js",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Should successfully created user data",
-              "fullTitle": "As a guest, I want to create user data Should successfully created user data",
+              "title": "Should succesfully register using valid account",
+              "fullTitle": "As a guest, I want to register Should succesfully register using valid account",
               "timedOut": false,
-              "duration": 607,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await ReqresAPI.user_create(data.UPDATE_DATA)\n\nassert.equal(response.status, 201);\nassert.containsAllKeys(response.data, [\"name\", \"job\", \"id\"]);\nassert.isString(response.data.name);\nassert.isString(response.data.id);\nassert.equal(response.data.name, data.UPDATE_DATA.name);\n// var_id_user_created = response.data.id;\nvar_id_user_created = 4;\nconsole.log(var_id_user_created);",
-              "err": {},
-              "uuid": "40db7c74-5ca8-4019-a440-b6ac11cc84e4",
-              "parentUUID": "14c7b1f4-8f7f-416e-a799-3f5c19722229",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "40db7c74-5ca8-4019-a440-b6ac11cc84e4"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 607,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 180000
-        },
-        {
-          "uuid": "e3e7a383-74a2-49a0-bc5d-5a51cd126296",
-          "title": "As a guest, I want to my user data",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\04_user_test.test.js",
-          "file": "\\test\\scenarios\\04_user_test.test.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Should successfully showing user data",
-              "fullTitle": "As a guest, I want to my user data Should successfully showing user data",
-              "timedOut": false,
-              "duration": 96,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await ReqresAPI.user_show()\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"data\", \"support\"]);\nassert.isObject(response.data, \"data\");\n// expect(response.data).to.deep.nested.property('data.id').that.deep.equals(2);",
-              "err": {},
-              "uuid": "ecaaae78-81c5-4658-a0f9-f239512ff2ab",
-              "parentUUID": "e3e7a383-74a2-49a0-bc5d-5a51cd126296",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "ecaaae78-81c5-4658-a0f9-f239512ff2ab"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 96,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 180000
-        },
-        {
-          "uuid": "5a7b5922-1336-4cf5-9a6c-385b59435240",
-          "title": "As a guest, I want to create user data",
-          "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\04_user_test.test.js",
-          "file": "\\test\\scenarios\\04_user_test.test.js",
-          "beforeHooks": [],
-          "afterHooks": [],
-          "tests": [
-            {
-              "title": "Should successfully created user data",
-              "fullTitle": "As a guest, I want to create user data Should successfully created user data",
-              "timedOut": false,
-              "duration": 2606,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "const response = await ReqresAPI.user_create(data.UPDATE_DATA)\n\nassert.equal(response.status, 201);\nassert.containsAllKeys(response.data, [\"name\", \"job\", \"id\"]);\nassert.isString(response.data.name);\nassert.isString(response.data.id);\nassert.equal(response.data.name, data.UPDATE_DATA.name);\nvar_id_user_created = response.data.id;\n// var_id_user_created = 4;\nconsole.log(var_id_user_created);",
-              "err": {},
-              "uuid": "93771add-1dce-4ab8-b99f-db7acf8a0bea",
-              "parentUUID": "5a7b5922-1336-4cf5-9a6c-385b59435240",
-              "isHook": false,
-              "skipped": false
-            },
-            {
-              "title": "Should successfully showing user data",
-              "fullTitle": "As a guest, I want to create user data Should successfully showing user data",
-              "timedOut": false,
-              "duration": 407,
+              "duration": 589,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "const response = await ReqresAPI.user_show()\n\n// assert.equal(response.status, 200);\n// assert.containsAllKeys(response.data, [\"data\", \"support\"]);\n// assert.isObject(response.data, \"data\");\nexpect(response.data).to.deep.nested.property('data.id').that.deep.equals(var_id_user_created);",
+              "code": "const response = await ReqresAPI.register(data.VALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);\nexpect(response.data).to.be.jsonSchema(schema.VALIDATE_REGISTER_SCHEMA)",
               "err": {
-                "message": "AssertionError: expected 4 to deeply equal '607'",
-                "estack": "AssertionError: expected 4 to deeply equal '607'\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/04_user_test.test.js:30:76)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "message": "AssertionError: expected value to match json-schema '{\"type\":\"object\",\"default\":{},...' -> '{\"id\":4,\"token\":\"QpwL5tke4Pnpj...'\n      Invalid type: number (expected string)\n          schema: {\"type\":\"object\",\"default\":{},\"required\":[\"id\"],\"properties\"...\n          rule:   /properties/id/type -> \"string\"\n          field:  /id -> number: 4",
+                "estack": "AssertionError: expected value to match json-schema '{\"type\":\"object\",\"default\":{},...' -> '{\"id\":4,\"token\":\"QpwL5tke4Pnpj...'\n      Invalid type: number (expected string)\n          schema: {\"type\":\"object\",\"default\":{},\"required\":[\"id\"],\"properties\"...\n          rule:   /properties/id/type -> \"string\"\n          field:  /id -> number: 4\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/01_register.test.js:18:37)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
                 "diff": null
               },
-              "uuid": "8f9d92f3-fc07-45c1-9901-d51a30ab8553",
-              "parentUUID": "5a7b5922-1336-4cf5-9a6c-385b59435240",
+              "uuid": "a4b2db77-79a7-4c6a-998d-b1ae63352e58",
+              "parentUUID": "38545025-3d3d-44bf-a953-730f1befbeaa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "93771add-1dce-4ab8-b99f-db7acf8a0bea"
-          ],
+          "passes": [],
           "failures": [
-            "8f9d92f3-fc07-45c1-9901-d51a30ab8553"
+            "a4b2db77-79a7-4c6a-998d-b1ae63352e58"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 3013,
+          "duration": 589,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000

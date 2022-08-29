@@ -1,8 +1,12 @@
-import { assert } from 'chai';
+import chai, { assert, expect } from 'chai';
+import jsonSchema from 'chai-json-schema';
 import ReqresAPI from '$root/pages/reqres.api';
 import * as data from '$root/data/user.data';
+import * as schema from '$root/schema/register.schema';
 
-describe('As a guest, I want to register', (done) => {
+chai.use(jsonSchema)
+
+describe.only('As a guest, I want to register', (done) => {
     it('Should succesfully register using valid account', async () => {
         const response = await ReqresAPI.register(data.VALID_REGISTER)
         
@@ -10,6 +14,8 @@ describe('As a guest, I want to register', (done) => {
         assert.containsAllKeys(response.data, ["id", "token"]);
         assert.isNumber(response.data.id);
         assert.isString(response.data.token);
+
+        expect(response.data).to.be.jsonSchema(schema.VALIDATE_REGISTER_SCHEMA)
     });
 });
 

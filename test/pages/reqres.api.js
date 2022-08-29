@@ -6,7 +6,9 @@ const ReqresAPI = {
     login: (data) => BaseAPI.post('/login', data),
     user_create: (data) => BaseAPI.post('/users', data),
     user_show: () => BaseAPI.get('/users/' + var_id_user_created),
-    user_update: (data) => BaseAPI.put('/users/2', data)
+    user_update: (data) => BaseAPI.put('/users/2', data),
+    user_patch: (data) => BaseAPI.patch('/users/2', data),
+    user_delete: () => BaseAPI.delete('/users/2'),
 }
 
 export default ReqresAPI;

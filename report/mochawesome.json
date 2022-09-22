@@ -2,22 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 2,
-    "passes": 1,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-<<<<<<< HEAD
-    "start": "2022-09-22T04:16:18.114Z",
-    "end": "2022-09-22T04:16:18.660Z",
-    "duration": 546,
-    "testsRegistered": 1,
-    "passPercent": 0,
-=======
-    "start": "2022-09-21T09:57:08.469Z",
-    "end": "2022-09-21T09:57:09.746Z",
-    "duration": 1277,
+    "failures": 0,
+    "start": "2022-09-22T04:18:17.299Z",
+    "end": "2022-09-22T04:18:18.391Z",
+    "duration": 1092,
     "testsRegistered": 2,
-    "passPercent": 50,
->>>>>>> 95497d65ce6872746b01c7001993808d21350adb
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -26,11 +18,7 @@
   },
   "results": [
     {
-<<<<<<< HEAD
-      "uuid": "45d197e9-ae4c-4dee-86a1-8a20fc713336",
-=======
-      "uuid": "9c525576-d1ce-42a6-b2ef-9682b1a7127e",
->>>>>>> 95497d65ce6872746b01c7001993808d21350adb
+      "uuid": "489f24fb-8fc8-4af3-8c47-ff18a6a94714",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -39,11 +27,7 @@
       "tests": [],
       "suites": [
         {
-<<<<<<< HEAD
-          "uuid": "d11ad1a3-5250-4c26-9d9a-2bec08993895",
-=======
-          "uuid": "50fadef5-952f-48f0-9e32-7d46f5b98e99",
->>>>>>> 95497d65ce6872746b01c7001993808d21350adb
+          "uuid": "eef8c767-623f-4358-8bf5-b6adfc667a30",
           "title": "As a guest, I want to register",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\01_register.test.js",
           "file": "\\test\\scenarios\\01_register.test.js",
@@ -54,10 +38,7 @@
               "title": "Should succesfully register using valid account",
               "fullTitle": "As a guest, I want to register Should succesfully register using valid account",
               "timedOut": false,
-<<<<<<< HEAD
-              "duration": 536,
-=======
-              "duration": 664,
+              "duration": 561,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -66,26 +47,26 @@
               "context": null,
               "code": "const response = await ReqresAPI.register(data.VALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);\n// expect(response.data).to.be.jsonSchema(schema.VALIDATE_REGISTER_SCHEMA)",
               "err": {},
-              "uuid": "818e052f-9156-4a03-b7d5-6d91e074f715",
-              "parentUUID": "50fadef5-952f-48f0-9e32-7d46f5b98e99",
+              "uuid": "375241f8-cad3-4f3c-9df8-47518de36c6b",
+              "parentUUID": "eef8c767-623f-4358-8bf5-b6adfc667a30",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "818e052f-9156-4a03-b7d5-6d91e074f715"
+            "375241f8-cad3-4f3c-9df8-47518de36c6b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 664,
+          "duration": 561,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
         },
         {
-          "uuid": "645aedcf-e8a7-4b5d-aabf-c71f2e02eca4",
+          "uuid": "bf6238c9-6145-42e1-bf20-7b0b251d4917",
           "title": "As a guest, I want to login",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\02_login.test.js",
           "file": "\\test\\scenarios\\02_login.test.js",
@@ -96,47 +77,29 @@
               "title": "Should successfully login using valid account",
               "fullTitle": "As a guest, I want to login Should successfully login using valid account",
               "timedOut": false,
-              "duration": 603,
->>>>>>> 95497d65ce6872746b01c7001993808d21350adb
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 522,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await ReqresAPI.login(data.VALID_LOGIN)\n\nassert.equal(response.status, 201);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
-              "err": {
-                "message": "AssertionError: expected 200 to equal 201",
-                "estack": "AssertionError: expected 200 to equal 201\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/02_login.test.js:10:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": "- 200\n+ 201\n"
-              },
-<<<<<<< HEAD
-              "uuid": "520dc770-994d-4589-903e-17b34ffbd534",
-              "parentUUID": "d11ad1a3-5250-4c26-9d9a-2bec08993895",
-=======
-              "uuid": "f8e64ea8-4c4e-4286-86ac-9fc9c2248267",
-              "parentUUID": "645aedcf-e8a7-4b5d-aabf-c71f2e02eca4",
->>>>>>> 95497d65ce6872746b01c7001993808d21350adb
+              "code": "const response = await ReqresAPI.login(data.VALID_LOGIN)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
+              "err": {},
+              "uuid": "ee5c1233-da24-45de-8452-892259b36507",
+              "parentUUID": "bf6238c9-6145-42e1-bf20-7b0b251d4917",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-<<<<<<< HEAD
-            "520dc770-994d-4589-903e-17b34ffbd534"
+          "passes": [
+            "ee5c1233-da24-45de-8452-892259b36507"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 536,
-=======
-            "f8e64ea8-4c4e-4286-86ac-9fc9c2248267"
-          ],
-          "pending": [],
-          "skipped": [],
-          "duration": 603,
->>>>>>> 95497d65ce6872746b01c7001993808d21350adb
+          "duration": 522,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
@@ -170,7 +133,7 @@
     },
     "marge": {
       "options": {
-        "reportDir": "reports"
+        "reportDir": "report"
       },
       "version": "6.2.0"
     }

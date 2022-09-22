@@ -14,27 +14,27 @@ describe('As a guest, I want to create user data', () => {
         assert.isString(response.data.id);
         assert.equal(response.data.name, data.UPDATE_DATA.name);
 
-        // var_id_user_created = response.data.id;
-        var_id_user_created = 4;
+        var_id_user_created = response.data.id;
+        // var_id_user_created = 4;
 
-        // console.log(var_id_user_created);
+        console.log(var_id_user_created);
 
     });
 });
 
 export var var_id_user_created;
 
-describe('As a guest, I want to my user data', () => {
-    it('Should successfully showing user data', async () => {
-        const response = await ReqresAPI.user_show()
+// describe('As a guest, I want to show my user data', () => {
+//     it('Should successfully showing user data', async () => {
+//         const response = await ReqresAPI.user_show()
         
-        assert.equal(response.status, 200);
-        assert.containsAllKeys(response.data, ["data", "support"]);
-        assert.isObject(response.data, "data");
-        assert.isObject(response.data, "support");
-        expect(response.data).to.deep.nested.property('data.id').that.deep.equals(4);
-    });
-});
+//         assert.equal(response.status, 200);
+//         assert.containsAllKeys(response.data, ["data", "support"]);
+//         assert.isObject(response.data, "data");
+//         assert.isObject(response.data, "support");
+//         expect(response.data).to.deep.nested.property('data.id').that.deep.equals(var_id_user_created);
+//     });
+// });
 
 describe('As a guest, I want to update my data', () => {
     it('Should successfully update user data', async () => {

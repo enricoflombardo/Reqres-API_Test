@@ -3,7 +3,7 @@ import ReqresAPI from '$root/pages/reqres.api';
 import * as data from '$root/data/user.data';
 
 
-describe('As a guest, I want to login', () => {
+describe.only('As a guest, I want to login', () => {
     it('Should successfully login using valid account', async () => {
         const response = await ReqresAPI.login(data.VALID_LOGIN)
         

@@ -28,7 +28,7 @@ jobs:
       - name: Install Yarn
         uses: borales/actions-yarn@v3.0.0
         with:
-          cmd: install --global yarn # will run `yarn install` command
+          cmd: install # will run `yarn install` command
       
       - name: Run Yarn Test
         uses: borales/actions-yarn@v3.0.0

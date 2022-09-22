@@ -7,7 +7,7 @@ describe.only('As a guest, I want to login', () => {
     it('Should successfully login using valid account', async () => {
         const response = await ReqresAPI.login(data.VALID_LOGIN)
         
-        assert.equal(response.status, 200);
+        assert.equal(response.status, 201);
         assert.containsAllKeys(response.data, ["token"]);
         assert.isString(response.data.token);
     });

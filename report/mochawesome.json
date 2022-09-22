@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 2,
-    "passes": 1,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-09-21T09:57:08.469Z",
-    "end": "2022-09-21T09:57:09.746Z",
-    "duration": 1277,
+    "failures": 0,
+    "start": "2022-09-21T10:39:32.664Z",
+    "end": "2022-09-21T10:39:34.408Z",
+    "duration": 1744,
     "testsRegistered": 2,
-    "passPercent": 50,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9c525576-d1ce-42a6-b2ef-9682b1a7127e",
+      "uuid": "b4a5f1b8-d50a-4da3-a37a-73e099a6daf3",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "50fadef5-952f-48f0-9e32-7d46f5b98e99",
+          "uuid": "752dc5b8-8a6f-4572-8069-1b573424ddde",
           "title": "As a guest, I want to register",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\01_register.test.js",
           "file": "\\test\\scenarios\\01_register.test.js",
@@ -38,7 +38,7 @@
               "title": "Should succesfully register using valid account",
               "fullTitle": "As a guest, I want to register Should succesfully register using valid account",
               "timedOut": false,
-              "duration": 664,
+              "duration": 814,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "const response = await ReqresAPI.register(data.VALID_REGISTER)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"id\", \"token\"]);\nassert.isNumber(response.data.id);\nassert.isString(response.data.token);\n// expect(response.data).to.be.jsonSchema(schema.VALIDATE_REGISTER_SCHEMA)",
               "err": {},
-              "uuid": "818e052f-9156-4a03-b7d5-6d91e074f715",
-              "parentUUID": "50fadef5-952f-48f0-9e32-7d46f5b98e99",
+              "uuid": "42f9795b-8f2f-433e-921a-5da34e36611a",
+              "parentUUID": "752dc5b8-8a6f-4572-8069-1b573424ddde",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "818e052f-9156-4a03-b7d5-6d91e074f715"
+            "42f9795b-8f2f-433e-921a-5da34e36611a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 664,
+          "duration": 814,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
         },
         {
-          "uuid": "645aedcf-e8a7-4b5d-aabf-c71f2e02eca4",
+          "uuid": "30feda3b-7b8d-464b-982f-5ef36b0aacb3",
           "title": "As a guest, I want to login",
           "fullFile": "D:\\CypressApps\\apinest\\test\\scenarios\\02_login.test.js",
           "file": "\\test\\scenarios\\02_login.test.js",
@@ -77,33 +77,29 @@
               "title": "Should successfully login using valid account",
               "fullTitle": "As a guest, I want to login Should successfully login using valid account",
               "timedOut": false,
-              "duration": 603,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 921,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await ReqresAPI.login(data.VALID_LOGIN)\n\nassert.equal(response.status, 201);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
-              "err": {
-                "message": "AssertionError: expected 200 to equal 201",
-                "estack": "AssertionError: expected 200 to equal 201\n    at Context.<anonymous> (file:///D:/CypressApps/apinest/test/scenarios/02_login.test.js:10:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
-                "diff": "- 200\n+ 201\n"
-              },
-              "uuid": "f8e64ea8-4c4e-4286-86ac-9fc9c2248267",
-              "parentUUID": "645aedcf-e8a7-4b5d-aabf-c71f2e02eca4",
+              "code": "const response = await ReqresAPI.login(data.VALID_LOGIN)\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
+              "err": {},
+              "uuid": "563d9fd9-fdca-4641-a3cd-5bad6a32845c",
+              "parentUUID": "30feda3b-7b8d-464b-982f-5ef36b0aacb3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "f8e64ea8-4c4e-4286-86ac-9fc9c2248267"
+          "passes": [
+            "563d9fd9-fdca-4641-a3cd-5bad6a32845c"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 603,
+          "duration": 921,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
@@ -137,7 +133,7 @@
     },
     "marge": {
       "options": {
-        "reportDir": "reports"
+        "reportDir": "report"
       },
       "version": "6.2.0"
     }
